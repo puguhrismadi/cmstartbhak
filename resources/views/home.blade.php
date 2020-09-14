@@ -1,12 +1,8 @@
-<html>
-<head>
-	<title>Homepage</title>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
-<body>
+@extends('template.index')
+@section('title','Homepage')
+@section('content')
 
-	<div class="container">
-		<br><br>
+
 		<div class="row">
 		@foreach($posts as $post)
 			<div class="col-md-3">
@@ -17,7 +13,5 @@
 			</div>
 		@endforeach
 		</div>
-	</div>
-
-</body>
-</html>
+	
+@endsection
