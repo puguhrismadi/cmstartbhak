@@ -5,9 +5,9 @@
   @endif
     <div class="inner-page">
       <div class="main">
-        <div class="container">
+        
           @yield('content')
-        </div>
+        
       </div>
     </div>
 

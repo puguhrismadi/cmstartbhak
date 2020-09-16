@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $posts = App\Models\Post::all();
-    return view('home', compact('posts'));
-});
+Route::get('/',[HomeController::class,'index']);
 
 Route::get('post/{slug}', function($slug){
 	$post = App\Models\Post::where('slug', '=', $slug)->firstOrFail();
