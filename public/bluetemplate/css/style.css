@@ -16,7 +16,12 @@ body {
 a {
   color: #5777ba;
 }
-
+#social-box > a > i{
+  color: #fff;
+}
+.row > i {
+  color: orange;
+}
 a:hover {
   color: #7b94c9;
   text-decoration: none;
@@ -132,7 +137,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu .get-started a {
-  background: #5777ba;
+  background: #E15A2A;
   color: #fff;
   border-radius: 50px;
   margin: 0 15px;
@@ -266,14 +271,14 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav a {
   display: block;
   position: relative;
-  color: #47536e;
+  color: #E15A2A;
   padding: 10px 20px;
   font-weight: 500;
   outline: none;
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-  color: #5777ba;
+  color: #E15A2A;
   text-decoration: none;
 }
 
@@ -356,12 +361,12 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 48px;
   font-weight: 500;
   line-height: 56px;
-  color: #5777ba;
+  color: #E15A2A;
   font-family: "Poppins", sans-serif;
 }
 
 #hero h2 {
-  color: #515f7d;
+  color: #eb9973;
   margin-bottom: 50px;
   font-size: 20px;
 }
@@ -380,7 +385,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .download-btn:hover {
-  background: #5777ba;
+  background: #eb9973;
 }
 
 #hero .download-btn i {
@@ -439,9 +444,11 @@ section {
 }
 
 .section-bg {
-  background-color: #f2f5fa;
+  background-color: #ffecec;
 }
-
+.form-control {
+  
+}
 .section-title {
   text-align: center;
   padding-bottom: 30px;
@@ -452,7 +459,7 @@ section {
   font-weight: 400;
   margin-bottom: 20px;
   padding-bottom: 0;
-  color: #5777ba;
+  color: #E15A2A;
   font-family: "Poppins", sans-serif;
 }
 
@@ -526,7 +533,7 @@ section {
 .features .content .icon-box i {
   font-size: 48px;
   float: left;
-  color: #5777ba;
+  color: #eb9973;
 }
 
 .features .content .icon-box p {
@@ -560,7 +567,7 @@ section {
 .details .content h3 {
   font-weight: 700;
   font-size: 32px;
-  color: #47536e;
+  color: #E15A2A;
 }
 
 .details .content ul {
@@ -608,7 +615,7 @@ section {
 }
 
 .gallery .owl-dot.active {
-  background-color: #5777ba !important;
+  background-color: #eb9973 !important;
 }
 
 .gallery .gallery-carousel {
@@ -621,7 +628,7 @@ section {
 
 @media (min-width: 992px) {
   .gallery .gallery-carousel .center {
-    border: 6px solid #5777ba;
+    border: 6px solid #eb9973;
     padding: 4px;
     background: #fff;
     z-index: 1;
@@ -660,7 +667,7 @@ section {
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 0;
-  color: #111;
+  color: #E15A2A;
 }
 
 .testimonials .testimonial-item h4 {
@@ -747,14 +754,14 @@ section {
 
 .pricing h4 {
   font-size: 46px;
-  color: #5777ba;
+  color: #E15A2A;
   font-weight: 400;
   font-family: "Open Sans", sans-serif;
   margin-bottom: 25px;
 }
 
 .pricing h4 span {
-  color: #bababa;
+  color: #ffecec;
   font-size: 18px;
   display: block;
 }
@@ -762,7 +769,7 @@ section {
 .pricing ul {
   padding: 0;
   list-style: none;
-  color: #999;
+  color: #eb9973;
   text-align: left;
   line-height: 20px;
 }
@@ -772,17 +779,17 @@ section {
 }
 
 .pricing ul i {
-  color: #5777ba;
+  color: #E15A2A;
   font-size: 18px;
   padding-right: 4px;
 }
 
 .pricing ul .na {
-  color: #ccc;
+  color: #f8ddd0;
 }
 
 .pricing ul .na i {
-  color: #ccc;
+  color: #f8ddd0;
 }
 
 .pricing ul .na span {
@@ -812,11 +819,11 @@ section {
 }
 
 .pricing .featured .get-started-btn {
-  background: #5777ba;
+  background: #E15A2A;
 }
 
 .pricing .featured .get-started-btn:hover {
-  background: #748ec6;
+  background: #eb9973;
 }
 
 @media (max-width: 992px) {
@@ -903,7 +910,7 @@ section {
 }
 
 .faq .accordion-list a.collapsed:hover {
-  color: #5777ba;
+  color: #E15A2A;
 }
 
 .faq .accordion-list a.collapsed .icon-show {
@@ -926,14 +933,14 @@ section {
 .contact .info {
   padding: 20px 40px;
   background: #f1f3f6;
-  color: #47536e;
+  color: #E15A2A;
   text-align: center;
   border: 1px solid #fff;
 }
 
 .contact .info i {
   font-size: 48px;
-  color: #9fb2d8;
+  color: #f8ddd0;
   margin-bottom: 15px;
 }
 
@@ -1017,7 +1024,7 @@ section {
 }
 
 .contact .php-email-form input::focus, .contact .php-email-form textarea::focus {
-  background-color: #5777ba;
+  background-color: #E15A2A;
 }
 
 .contact .php-email-form input {
@@ -1030,16 +1037,16 @@ section {
 
 .contact .php-email-form button[type="submit"] {
   background: #fff;
-  border: 2px solid #5777ba;
+  border: 2px solid #eb9973;
   padding: 10px 24px;
-  color: #5777ba;
+  color: #eb9973;
   transition: 0.4s;
   border-radius: 50px;
   margin-top: 5px;
 }
 
 .contact .php-email-form button[type="submit"]:hover {
-  background: #5777ba;
+  background: #eb9973;
   color: #fff;
 }
 
@@ -1077,7 +1084,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #fff;
+  
   padding: 0 0 30px 0;
   color: #47536e;
   font-size: 14px;
@@ -1125,7 +1132,7 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #5777ba;
+  background: #E15A2A;
   color: #fff;
   transition: 0.3s;
   border-radius: 50px;
@@ -1133,7 +1140,7 @@ section {
 }
 
 #footer .footer-newsletter form input[type="submit"]:hover {
-  background: #415f9d;
+  background: #eb9973;
 }
 
 #footer .footer-top {
@@ -1151,9 +1158,11 @@ section {
   padding: 2px 0 2px 0;
   line-height: 1;
   font-weight: 700;
-  color: #47536e;
+  color: #ffecec;
 }
-
+div > i {
+  color:#eb9973;
+}
 #footer .footer-top .footer-contact p {
   font-size: 14px;
   line-height: 24px;
@@ -1206,13 +1215,13 @@ section {
 
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
-  color: #5777ba;
+  color: #E15A2A;
 }
 
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #5777ba;
+  background: #E15A2A;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -1233,15 +1242,19 @@ section {
 #footer .copyright {
   text-align: center;
   float: left;
-  color: #47536e;
+  color: #E15A2A;
 }
 
 #footer .credits {
   float: right;
   text-align: center;
   font-size: 13px;
-  color: #47536e;
+  color: #E15A2A;
 }
+i,i>fa {
+  color:#E15A2A;
+}
+
 
 @media (max-width: 768px) {
   #footer .copyright, #footer .credits {

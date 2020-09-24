@@ -3,10 +3,12 @@
 @section('content')
 <style>
 .center-cropped {
+  
+  height: 150px;
   width: 100px;
-  height: 100px;
   background-position: center center;
   background-repeat: no-repeat;
+  padding: 2pt;
 }
 .caption-1 figcaption {
   position: absolute;
@@ -50,8 +52,8 @@
 		<div class="container">
   
 		  <div class="section-title">
-			<h2>App Features</h2>
-			<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+			<h2>{{$fiture->title_feature}}</h2>
+			<p>{{$fiture->description}}.</p>
 		  </div>
   
 		  <div class="row no-gutters">
@@ -60,33 +62,33 @@
 				<div class="row">
 				  <div class="col-md-6 icon-box" data-aos="fade-up">
 					<i class="fa fa-folder-o"></i>
-					<h4>Corporis voluptates sit</h4>
-					<p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+					<h4>{{$fiture->title_feature_1}}</h4>
+					<p>{!! $fiture->feature_1 !!}</p>
 				  </div>
 				  <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
 					<i class="fa fa-heart-o"></i>
-					<h4>Ullamco laboris nisi</h4>
-					<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+					<h4>{{$fiture->title_feature_2}}</h4>
+					<p>{!! $fiture->feature_2 !!}</p>
 				  </div>
 				  <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
 					<i class="fa fa-hourglass-o"></i>
-					<h4>Labore consequatur</h4>
-					<p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+					<h4>{{$fiture->title_feature_3}}</h4>
+					<p>{!! $fiture->feature_3 !!}</p>
 				  </div>
 				  <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
 					<i class="fa fa-shield"></i>
-					<h4>Beatae veritatis</h4>
-					<p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+					<h4>{{$fiture->title_feature_4}}</h4>
+					<p>{!! $fiture->feature_4 !!}</p>
 				  </div>
 				  <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
 					<i class="fa fa-paper-plane-o"></i>
-					<h4>Molestiae dolor</h4>
-					<p>Et fuga et deserunt et enim. Dolorem architecto ratione tensa raptor marte</p>
+					<h4>{{$fiture->title_feature_5}}</h4>
+					<p>{!! $fiture->feature_5 !!}</p>
 				  </div>
 				  <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
 					<i class="fa fa-share-alt"></i>
-					<h4>Explicabo consectetur</h4>
-					<p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>
+					<h4>{{$fiture->title_feature_6}}</h4>
+					<p>{!! $fiture->feature_6 !!}</p>
 				  </div>
 				</div>
 			  </div>
@@ -102,7 +104,7 @@
 	<!-- ======= Details Section ======= -->
     <section id="details" class="details">
 		<div class="container">
-		@foreach($pages as $key=>$pages)
+		@foreach($pages as $key=>$fpages)
 		{{-- {{ $key }} --}}
 		  <div class="row content">
 			<div  @if ($key%2==0) class="col-md-4"
@@ -111,17 +113,18 @@
 			class="col-md-4 order-1 order-md-2"
 			data-aos="fade-left"
 			@endif >
-			  <img src="{{ Voyager::image( $pages->image ) }}" class="img-fluid" alt="">
+			  <img src="{{ Voyager::image( $fpages->image ) }}" class="img-fluid" alt="">
 			</div>
 			<div class="col-md-8 pt-4" data-aos="fade-up">
-			  <h3>{{ $pages->title }}</h3>
+			  <h3>{{ $fpages->title }}</h3>
 			
 			  <p>
-				{!! $pages->body !!}
+				{!! $fpages->body !!}
 			  </p>
 			</div>
 		  </div>
 		@endforeach
+
 		  {{-- <div class="row content">
 			<div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
 			  <img src="{{ asset('bluetemplate/img/details-2.png')}}" class="img-fluid" alt="">
@@ -143,7 +146,9 @@
 			</div>
 		  </div>
    --}}
+   
 		</div>
+	<div class="container ">{{$pages->links()}}</div>
 	  </section><!-- End Details Section -->
   
     <!-- ======= Gallery Section ======= -->
@@ -158,7 +163,7 @@
 		  <div class="owl-carousel gallery-carousel" data-aos="fade-up">
 		
 			@foreach($posts as $post)
-			<a href="{{ Voyager::image( $post->image ) }}" class="venobox" data-gall="gallery-carousel"><img src="{{ Voyager::image( $post->image ) }}" alt=""><h5 class="text-small text-center">{{ $post->title }}</h5></a>
+			<a href="{{ Voyager::image( $post->image ) }}" class="venobox" data-gall="gallery-carousel"><img src="{{ Voyager::image( $post->image ) }}" class="center-cropped" alt=""><h5 class="text-small text-center ">{{ $post->title }}</h5></a>
 			
 			@endforeach
 		  </div>
@@ -218,7 +223,7 @@
 	  
 				<div class="testimonial-wrap">
 				  <div class="testimonial-item">
-					<img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+					<img src="{{ asset('bluetemplate/img/testimonials/testimonials-4.jpg')}}" class="testimonial-img" alt="">
 					<h3>Matt Brandon</h3>
 					<h4>Freelancer</h4>
 					<p>
@@ -231,7 +236,7 @@
 	  
 				<div class="testimonial-wrap">
 				  <div class="testimonial-item">
-					<img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+					<img src="{{ asset('bluetemplate/img/testimonials/testimonials-5.jpg')}}" class="testimonial-img" alt="">
 					<h3>John Larson</h3>
 					<h4>Entrepreneur</h4>
 					<p>

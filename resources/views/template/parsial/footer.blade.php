@@ -46,7 +46,7 @@
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Profesioanl Training</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
             </ul>
@@ -55,7 +55,7 @@
           <div class="col-lg-3 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="300">
             <h4>Our Social Networks</h4>
             <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
-            <div class="social-links mt-3">
+            <div id="social-box" class="social-links mt-3">
               <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
               <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
               <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
@@ -81,9 +81,23 @@
       </div>
     </div>
   </footer><!-- End Footer -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="{{asset('venom-button/venom-button.min.js')}}"></script>
+<link rel="stylesheet" href="{{asset('venom-button/venom-button.min.css')}}">
+<div id="myDiv"></div>
+<script type="text/javascript">
+  $(function () {
+    $('#myDiv').venomButton({
+      phone: '62898253545'
+    });
+  });
 
-  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
-
+  $('#myDiv').venomButton({
+    phone: '62898253545',
+    chatMessage: 'Hi ada yang bisa 👋<br><br>Saya Bantu?',
+    showPopup: true
+});
+</script>
   <!-- Vendor JS Files -->
   <script src="{{ asset('bluetemplate/vendor/jquery/jquery.min.js')}}"></script>
   <script src="{{ asset('template/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
