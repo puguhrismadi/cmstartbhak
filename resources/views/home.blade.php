@@ -148,6 +148,7 @@
    --}}
    
 		</div>
+		
 	<div class="container ">{{$pages->links()}}</div>
 	  </section><!-- End Details Section -->
   

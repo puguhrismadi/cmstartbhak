@@ -95,7 +95,10 @@
   $('#myDiv').venomButton({
     phone: '62898253545',
     chatMessage: 'Hi ada yang bisa 👋<br><br>Saya Bantu?',
-    showPopup: true
+    showPopup: true,
+    headerColor: '#E15A2A',
+    buttonColor: '#E15A2A',
+    position: "Right"
 });
 </script>
   <!-- Vendor JS Files -->
