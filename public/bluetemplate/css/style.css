@@ -1255,7 +1255,9 @@ i,i>fa {
   color:#E15A2A;
 }
 
-
+.imageteam {
+  width: 150px;
+}
 @media (max-width: 768px) {
   #footer .copyright, #footer .credits {
     float: none;

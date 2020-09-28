@@ -120,6 +120,11 @@
 			
 			  <p>
 				{!! $fpages->body !!}
+				<nav class="nav-menu">
+				<ul>
+					<li class="get-started" ><a href="#">Register Now</a></li>
+				</ul>
+				</nav>
 			  </p>
 			</div>
 		  </div>
