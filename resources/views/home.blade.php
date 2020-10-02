@@ -103,58 +103,8 @@
   
 	<!-- ======= Details Section ======= -->
     <section id="details" class="details">
-		<div class="container">
-		@foreach($pages as $key=>$fpages)
-		{{-- {{ $key }} --}}
-		  <div class="row content">
-			<div  @if ($key%2==0) class="col-md-4"
-			data-aos="fade-right"	
-			@endif @if ($key%2!=0)
-			class="col-md-4 order-1 order-md-2"
-			data-aos="fade-left"
-			@endif >
-			  <img src="{{ Voyager::image( $fpages->image ) }}" class="img-fluid" alt="">
-			</div>
-			<div class="col-md-8 pt-4" data-aos="fade-up">
-			  <h3>{{ $fpages->title }}</h3>
-			
-			  <p>
-				{!! $fpages->body !!}
-				<nav class="nav-menu">
-				<ul>
-					<li class="get-started" ><a href="#">Register Now</a></li>
-				</ul>
-				</nav>
-			  </p>
-			</div>
-		  </div>
-		@endforeach
-
-		  {{-- <div class="row content">
-			<div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
-			  <img src="{{ asset('bluetemplate/img/details-2.png')}}" class="img-fluid" alt="">
-			</div>
-			<div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
-			  <h3>Corporis temporibus maiores provident</h3>
-			  <p class="font-italic">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-				magna aliqua.
-			  </p>
-			  <p>
-				Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-				velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-				culpa qui officia deserunt mollit anim id est laborum
-			  </p>
-			  <p>
-				Inventore id enim dolor dicta qui et magni molestiae. Mollitia optio officia illum ut cupiditate eos autem. Soluta dolorum repellendus repellat amet autem rerum illum in. Quibusdam occaecati est nisi esse. Saepe aut dignissimos distinctio id enim.
-			  </p>
-			</div>
-		  </div>
-   --}}
-   
-		</div>
-		
-	<div class="container ">{{$pages->links()}}</div>
+	@include('template.parsial.homeoriginal')
+	{{-- <div class="container ">{{$pages->links()}}</div> --}}
 	  </section><!-- End Details Section -->
   
     <!-- ======= Gallery Section ======= -->
@@ -163,7 +113,7 @@
   
 		  <div class="section-title">
 			<h2>Gallery Kegiatan</h2>
-			<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+			<p>IT Cermat telah berpengalaman sejak 2015 dalam melakukan Kegiatan pelatihan/Training dengan berbagai instansi dan telah bekerjasama dengan instansi pemerintah</p>
 		  </div>
   
 		  <div class="owl-carousel gallery-carousel" data-aos="fade-up">
@@ -264,7 +214,7 @@
 
 	  <div class="section-title">
 		<h2>Contact</h2>
-		<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+		<p</p>
 	  </div>
 
 	  <div class="row">
@@ -274,17 +224,17 @@
 			<div class="col-lg-6 info" data-aos="fade-up">
 			  <i class="bx bx-map"></i>
 			  <h4>Address</h4>
-			  <p>A108 Adam Street,<br>New York, NY 535022</p>
+			  <p>{{setting('site.address_line1')}}, {{setting('site.address_line2')}},{{setting('site.address_line3')}}</p>
 			</div>
 			<div class="col-lg-6 info" data-aos="fade-up" data-aos-delay="100">
 			  <i class="bx bx-phone"></i>
 			  <h4>Call Us</h4>
-			  <p>+1 5589 55488 55<br>+1 5589 22548 64</p>
+			  <p>{{setting('site.phone')}}</p>
 			</div>
 			<div class="col-lg-6 info" data-aos="fade-up" data-aos-delay="200">
 			  <i class="bx bx-envelope"></i>
 			  <h4>Email Us</h4>
-			  <p>contact@example.com<br>info@example.com</p>
+			  <p>{{setting('site.email')}}</p>
 			</div>
 			<div class="col-lg-6 info" data-aos="fade-up" data-aos-delay="300">
 			  <i class="bx bx-time-five"></i>

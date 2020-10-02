@@ -41,6 +41,24 @@
     width: 110px;
     
   }
+  .blog .carousel-indicators {
+	left: 0;
+	top: auto;
+    bottom: -40px;
+
+}
+
+/* The colour of the indicators */
+.blog .carousel-indicators li {
+    background: #a3a3a3;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+}
+
+.blog .carousel-indicators .active {
+background: #707070;
+}
 </style>
 <body>
 
@@ -56,13 +74,12 @@
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="#features">App Features</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#faq">F.A.Q</a></li>
-          <li><a href="#contact">Contact Us</a></li>
+        {{menu('homepage')}}
+       
+      </nav><!-- .nav-menu -->
+      <nav class="nav-menu d-none d-lg-block">
+       
+       
 
           <li class="get-started"><a href="#features">Get Started</a></li>
         </ul>
@@ -71,4 +88,9 @@
     </div>
   </header><!-- End Header -->
 
- 
+ <script>
+   // optional
+		$('#blogCarousel').carousel({
+				interval: 5000
+		}); 
+ </script>

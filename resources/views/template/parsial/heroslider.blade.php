@@ -7,9 +7,10 @@
       <div class="row">
         <div class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-up">
           <div>
-            <h1>App landing page template</h1>
-            <p>Lorem ipsum dolor sit amet, tota senserit percipitur ius ut, usu et fastidii forensibus voluptatibus. His ei nihil feugait</p>
-            <a href="#" class="download-btn"><i class="fa fa-play"></i>More About Us</a>
+            <h1>{{setting('site.big_headline')}}</h1>
+            <h5>{{setting('site.sub_title_headline')}}</h5>
+            <br>
+            <a href="{{setting('site.link_button_headline')}}" class="download-btn"><i class="fa fa-play"></i>More About Us</a>
             
           </div>
         </div>

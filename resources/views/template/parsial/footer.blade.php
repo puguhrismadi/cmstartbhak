@@ -5,27 +5,17 @@
       <div class="container">
         <h2 class="mb-5">Our Team</h2>
         <div class="row">
+          @foreach ($team as $tm)
+              
+          
           <div class="col-lg-4">
             <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-              <img class="img-fluid rounded-circle imageteam mb-3" src="{{asset('bluetemplate/img/testimonials-1.jpg')}}" alt="">
-              <h5>Margaret E.</h5>
-              <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
+              <img class="img-fluid rounded-circle imageteam mb-3" src="{{ Voyager::image( $tm->gambar) }}" alt="">
+              <h5>{{$tm->nama_team}}</h5>
+              <p class="font-weight-light mb-0"><b>{{$tm->role_job}}</b><br>{{$tm->description}}</p>
             </div>
           </div>
-          <div class="col-lg-4">
-            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-              <img class="img-fluid imageteam rounded-circle mb-3" src="{{asset('bluetemplate/img/testimonials-2.jpg')}}" alt="">
-              <h5>Fred S.</h5>
-              <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-              <img class="img-fluid imageteam rounded-circle mb-3" src="{{asset('bluetemplate/img/testimonials-3.jpg')}}" alt="">
-              <h5>Sarah W.</h5>
-              <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
-            </div>
-          </div>
+          @endforeach
         </div>
       </div>
     </div>
@@ -48,11 +38,7 @@
           <div class="col-lg-3 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="100">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              {{menu('homepage')}}
             </ul>
           </div>
 
@@ -69,7 +55,7 @@
 
           <div class="col-lg-3 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="300">
             <h4>Our Social Networks</h4>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+            <p>Sosial Media Kami untuk informasi mengenai kami</p>
             <div id="social-box" class="social-links mt-3">
               <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
               <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
@@ -87,13 +73,7 @@
       <div class="copyright">
         &copy; Copyright <strong><span>{{ setting('site.title') }}</span></strong>. All Rights Reserved
       </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-app-landing-page-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+     
     </div>
   </footer><!-- End Footer -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
@@ -103,17 +83,17 @@
 <script type="text/javascript">
   $(function () {
     $('#myDiv').venomButton({
-      phone: '62898253545'
+      phone: '62811886762'
     });
   });
 
   $('#myDiv').venomButton({
-    phone: '62898253545',
+    phone: '62811886762',
     chatMessage: 'Hi ada yang bisa 👋<br><br>Saya Bantu?',
     showPopup: true,
     headerColor: '#E15A2A',
-    buttonColor: '#E15A2A',
-    position: "Right"
+    buttonColor: '#4ac959',
+    position: "right"
 });
 </script>
   <!-- Vendor JS Files -->
