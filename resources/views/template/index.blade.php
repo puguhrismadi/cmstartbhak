@@ -1,8 +1,6 @@
 
 @include('template.parsial.header')
-  @if (url('/'))
-      @include('template.parsial.heroslider')
-  @endif
+  @yield('heroslider')
     <div class="inner-page">
       <div class="main">
         
