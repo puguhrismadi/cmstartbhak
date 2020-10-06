@@ -70,7 +70,7 @@ background: #707070;
       <div class="logo mr-auto">
         {{-- <h1 class="text-light"><a href="index.html">{{ setting('site.title') }}</a></h1> --}}
         <!-- Uncomment below if you prefer to use an image logo -->
-       <a href="index.html"><img src="{{ Voyager::image( setting('site.logo') ) }}" alt="" class="img-fluid mylogo"></a>
+       <a href="{{url('/')}}"><img src="{{ Voyager::image( setting('site.logo') ) }}" alt="" class="img-fluid mylogo"></a>
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
