@@ -27,13 +27,13 @@
         <p>Bagaimana Kegiatan Training Di IT Cermat Cek Video Kegiatan Di bawah</p>
        
     </div>
-    <div class="container">
+    <div class="container aos-animate" >
         <div class="row">
             <div class="row">
                
                 @foreach ($video as $testvideo)
                
-                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <div data-aos="fade-up" class="col-lg-3 col-md-4 col-xs-6 thumb">
                     <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="{{$testvideo->nama_kegiatan}}"
                    
                        data-image="https://www.youtube.com/embed/{{$testvideo->file_video}}"
