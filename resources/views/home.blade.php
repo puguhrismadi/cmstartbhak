@@ -175,7 +175,15 @@
 
         <div class="section-title">
             <h2>Contact</h2>
-            <p</p> </div> <div class="row">
+            <p>
+                @if (session()->has('pesan'))
+                    
+                <div class="alert alert-success alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Success!</strong> Terimakasih Anda Telah Mengisi Buku Tamu
+                  </div>
+                  @endif
+        </p> </div> <div class="row">
 
                 <div class="col-lg-6">
                     <div class="row">
@@ -204,40 +212,12 @@
                 </div>
 
                 <div class="col-lg-6">
-                   <form action="{{url('/simpanbukutamu')}}" method="post"  class="php-email-form">
+                   
                   
-                {{-- <form action="#" method="post" role="form" class="php-email-form" data-aos="fade-up"> --}}
-                        @csrf
-                        <div class="form-group">
-                            <input placeholder="Your Name" type="text" name="name" class="form-control" id="name"
-                                data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                            <div class="validate"></div>
-                        </div>
-                        <div class="form-group">
-                            <input placeholder="Your Email" type="email" class="form-control" name="email" id="email"
-                                data-rule="email" data-msg="Please enter a valid email" />
-                            <div class="validate"></div>
-                        </div>
-                        <div class="form-group">
-                            <input placeholder="Subject" type="text" class="form-control" name="subject" id="subject"
-                                data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                            <div class="validate"></div>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Message" class="form-control" name="message" rows="5"
-                                data-rule="required" data-msg="Please write something for us"></textarea>
-                            <div class="validate"></div>
-                        </div>
-                        <div class="mb-3">
-                            <div class="loading">Loading</div>
-                            @if(session()->has('pesan'))
-        <div class="alert alert-success">{{ session()->get('pesan') }}</div>
-   @endif
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
-                        </div>
-                        <div class="text-center"><button type="submit">Send Message</button></div>
-                    </form>
+                {{-- <form action="{{url('/simpanbukutamu')}} method="post" role="form" class="php-email-form" data-aos="fade-up"> --}}
+                        
+                       @include('template.parsial.bukutamu')
+                    
                 </div>
 
         </div>

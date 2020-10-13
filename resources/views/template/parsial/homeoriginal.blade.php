@@ -20,7 +20,7 @@
            </p>
             <nav class="nav-menu">
             <ul>
-                <li class="get-started" ><a href="#">Register Now</a></li>
+                <li class="get-started" ><a href="{{url("/registrasi")}}">Register Now</a></li>
                 <li class="get-started" ><a href="{{url("course/$fpages->slug")}}">Learn More</a></li>
             </ul>
             </nav>

@@ -26,11 +26,18 @@
           <div class="col-lg-3 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="200">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              {{-- @dump($menufooter) --}}
+              @foreach ($menufooter as $link)
+                  
+              
+              <li><i class="bx bx-chevron-right"></i> <a href="{{url("course/$link->slug")}}">{{$link->title}}</a></li>
+              @endforeach
+
+              {{-- <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Profesioanl Training</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li> --}}
             </ul>
           </div>
 
@@ -38,11 +45,11 @@
             <h4>Our Social Networks</h4>
             <p>Sosial Media Kami untuk informasi mengenai kami</p>
             <div id="social-box" class="social-links mt-3">
-              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="fa fa-skype"></i></a>
-              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+              <a href="{{ setting('site.urlTwitter') }}" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="{{ setting('site.urlFb') }}" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="{{ setting('site.urlGram') }}" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="{{ setting('site.urlYoutube')}}" class="youtube"><i class="fa fa-youtube"></i></a>
+              <a href="{{ setting('site.urlLinkedin') }}" class="linkedin"><i class="fa fa-linkedin"></i></a>
             </div>
           </div>
 
@@ -78,17 +85,112 @@
 });
 </script>
   <!-- Vendor JS Files -->
+
   <script src="{{ asset('bluetemplate/vendor/jquery/jquery.min.js')}}"></script>
-  <script src="{{ asset('template/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{ asset('bluetemplate/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
   <script src="{{ asset('bluetemplate/vendor/jquery.easing/jquery.easing.min.js')}}"></script>
-  <script src="{{ asset('bluetemplate/vendor/php-email-form/validate.js')}}"></script>
+  {{-- <script src="{{ asset('bluetemplate/vendor/php-email-form/validate.js')}}"></script> --}}
   <script src="{{ asset('bluetemplate/vendor/owl.carousel/owl.carousel.min.js')}}"></script>
   <script src="{{ asset('bluetemplate/vendor/venobox/venobox.min.js')}}"></script>
   <script src="{{ asset('bluetemplate/vendor/aos/aos.js')}}"></script>
 
   <!-- Template Main JS File -->
   <script src="{{ asset('bluetemplate/js/main.js')}}"></script>
+<script>
+  let modalId = $('#image-gallery');
 
+$(document)
+  .ready(function () {
+
+    loadGallery(true, 'a.thumbnail');
+
+    //This function disables buttons when needed
+    function disableButtons(counter_max, counter_current) {
+      $('#show-previous-image, #show-next-image')
+        .show();
+      if (counter_max === counter_current) {
+        $('#show-next-image')
+          .hide();
+      } else if (counter_current === 1) {
+        $('#show-previous-image')
+          .hide();
+      }
+    }
+
+    /**
+     *
+     * @param setIDs        Sets IDs when DOM is loaded. If using a PHP counter, set to false.
+     * @param setClickAttr  Sets the attribute for the click handler.
+     */
+
+    function loadGallery(setIDs, setClickAttr) {
+      let current_image,
+        selector,
+        counter = 0;
+
+      $('#show-next-image, #show-previous-image')
+        .click(function () {
+          if ($(this)
+            .attr('id') === 'show-previous-image') {
+            current_image--;
+          } else {
+            current_image++;
+          }
+
+          selector = $('[data-image-id="' + current_image + '"]');
+          updateGallery(selector);
+        });
+
+      function updateGallery(selector) {
+        let $sel = selector;
+        current_image = $sel.data('image-id');
+        $('#image-gallery-title')
+          .text($sel.data('title'));
+        $('#image-gallery-image')
+          .attr('src', $sel.data('image'));
+        disableButtons(counter, $sel.data('image-id'));
+      }
+
+      if (setIDs == true) {
+        $('[data-image-id]')
+          .each(function () {
+            counter++;
+            $(this)
+              .attr('data-image-id', counter);
+          });
+      }
+      $(setClickAttr)
+        .on('click', function () {
+          updateGallery($(this));
+        });
+    }
+  });
+
+// build key actions
+$(document)
+  .keydown(function (e) {
+    switch (e.which) {
+      case 37: // left
+        if ((modalId.data('bs.modal') || {})._isShown && $('#show-previous-image').is(":visible")) {
+          $('#show-previous-image')
+            .click();
+        }
+        break;
+
+      case 39: // right
+        if ((modalId.data('bs.modal') || {})._isShown && $('#show-next-image').is(":visible")) {
+          $('#show-next-image')
+            .click();
+        }
+        break;
+
+      default:
+        return; // exit this handler for other keys
+    }
+    e.preventDefault(); // prevent the default action (scroll / move caret)
+  });
+
+</script>
 </body>
 
 </html>

@@ -21,7 +21,7 @@
   <!-- Vendor CSS Files -->
   <link href="{{ asset('bluetemplate/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
   <link href="{{ asset('bluetemplate/vendor/icofont/icofont.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('bluetemlate/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('bluetemplate/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
   <link href="{{ asset('bluetemplate/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
   <link href="{{ asset('bluetemplate/vendor/venobox/venobox.css')}}" rel="stylesheet">
   <link href="{{ asset('bluetemplate/vendor/aos/aos.css')}}" rel="stylesheet">
