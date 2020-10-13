@@ -81,7 +81,7 @@ background: #707070;
        
        
 
-          <li class="get-started"><a href="#features">Get Started</a></li>
+          <li class="get-started"><a href="{{url('/#features')}}">Get Started</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
