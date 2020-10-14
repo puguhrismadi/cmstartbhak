@@ -4,7 +4,7 @@
         color: white;
     }
 </style>
-<form  role="form"  action="{{route("saveguest")}}" method="POST"
+<form data-aos="fade-left"  role="form"  action="{{route("saveguest")}}" method="POST"
     enctype="multipart/form-data">
     <!-- PUT Method if we are editing -->
 

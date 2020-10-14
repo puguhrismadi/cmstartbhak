@@ -83,7 +83,7 @@
 
                            {!!$page->body!!}
                            <h5>Persyaratan</h5>
-                           <p>{{$page->persyaratan}}</p>
+                           <p>{!!$page->persyaratan!!}</p>
 
                            
                         </div>
