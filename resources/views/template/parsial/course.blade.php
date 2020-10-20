@@ -32,7 +32,7 @@
         transform: translateY(-50%);
     }
     .container-fluid{
-        background-color: white;
+        background-color:#ECF3FB;
     }
 
 
@@ -61,7 +61,7 @@
     </div>
   
 <div class="main">
-    <div class="container"><br></div>
+    
     <!-- ======= App Features Section ======= -->
 <div class="container-fluid" data-aos="fade-up">
     <div class="card-body">
@@ -94,16 +94,16 @@
                     <img src="{{Voyager::image($page->image)}}" class="img-fluid" alt="">
                 </div>
             </div>
-            <h2>Materi dan Pricing</h2>
-            <p>IT Cermat telah berpengalaman sejak 2015 dalam melakukan Kegiatan pelatihan/Training dengan berbagai
-                instansi dan telah bekerjasama dengan instansi pemerintah</p>
-                @include('template.parsial.pricingtable')
+           
+               
         </div>
     </section><!-- End App Features Section -->
 </div>
 </div>
-   
+<div class="container">
+    @include('template.component.chatstyle')
+</div>
 @include('template.parsial.videotestimoni')
-
+@include('template.component.pricingcard')
 
 @endsection

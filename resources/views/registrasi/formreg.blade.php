@@ -12,30 +12,48 @@
         height: 80px;
         width: 100%;
     }
+   
+.themeBtn {
+    background: #ff5c00;
+    color: #ffffff !important;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    height: 50px;
+    line-height: 0.8;
+    padding: 18px 30px;
+    text-transform: capitalize;
+    border-radius: 1px;
+    letter-spacing: 0.5px;
+	border:0px !important;
+	cursor:pointer;
+	border-radius:100px;
 
-
+}
 </style>
 <div id="head-course" class="bg-white"></div>
-<div class="no-padding bg-blue" data-aos="fade-up">
+{{-- <div class="no-padding bg-blue" data-aos="fade-up">
      
     <img width="100%" src="{{asset('image/bgregister.png')}}" alt="">
-</div>
+</div> --}}
 <section id="details" class="details">
- <div class="container" data-aos="fade-up">
-
+ <div class="container col-md-6" data-aos="fade-up">
+   
     <div class="card">
-   <div class="card-header">
-       Form Registrasi Training
-   </div>
-    <div class="card-body" >
-        <form role="form" class="form-edit-add" action="{{route("simpanpeserta")}}" method="POST"
+   
+    <div class="card-body " >
+        <h2 class="section-title">
+            Form Registrasi Training
+        </h2>
+        <div class="container col-md-12">
+            <form role="form" class="form-edit-add" action="{{route("simpanpeserta")}}" method="POST"
             enctype="multipart/form-data">
             <!-- PUT Method if we are editing -->
     
             <!-- CSRF TOKEN -->
             @csrf
     
-            <div class="panel-body"  >
+            <div class="panel-body col-md-12"  >
     
     
                 <!-- Adding / Editing -->
@@ -96,18 +114,19 @@
     
                     </select>
     
+                    <br>
+                        <button type="submit"  href="https://www.behance.net/sakiran" target="_blank" class="themeBtn">Register</button>
+                   
     
-    
-    
-    
+                    
+                   
                 </div>
     
             </div><!-- panel-body -->
     
-            <div class="panel-footer">
-                <button type="submit" class="btn btn-primary save">Simpan</button>
-            </div>
+           
         </form>
+        </div>
     </div>
          
 </div>

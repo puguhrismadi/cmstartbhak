@@ -27,11 +27,11 @@
             <h4>Our Services</h4>
             <ul>
               {{-- @dump($menufooter) --}}
-              @foreach ($menufooter as $link)
+              {{-- @foreach ($menufooter as $link)
                   
               
               <li><i class="bx bx-chevron-right"></i> <a href="{{url("course/$link->slug")}}">{{$link->title}}</a></li>
-              @endforeach
+              @endforeach --}}
 
               {{-- <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
@@ -190,7 +190,18 @@ $(document)
     e.preventDefault(); // prevent the default action (scroll / move caret)
   });
 
+//carousel course
+
+
+$(document).ready(function() {
+    $('#Carousel').carousel({
+        interval: 5000
+    })
+});
+
 </script>
+
+
 </body>
 
 </html>

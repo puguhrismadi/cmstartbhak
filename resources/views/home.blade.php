@@ -106,9 +106,8 @@
 
     <!-- ======= Details Section ======= -->
     <section id="details" class="details">
-        @include('template.parsial.homeoriginal')
-        {{-- <div class="container ">{{$pages->links()}}
-</div> --}}
+        @include('template.component.coursecard')
+      
 </section><!-- End Details Section -->
 
 <!-- ======= Gallery Section ======= -->
