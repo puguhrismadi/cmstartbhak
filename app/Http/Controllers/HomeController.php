@@ -61,7 +61,7 @@ class HomeController extends Controller
         $urlyutube=[];
         
 
-        return view('template.parsial.course',['page'=>$page,'materi'=>$materi,'video'=>$video,'urlvideo'=>$urlyutube,'menufooter'=>$this->menuFooter()]);
+        return view('template.course.contentcourse',['page'=>$page,'materi'=>$materi,'video'=>$video,'urlvideo'=>$urlyutube,'menufooter'=>$this->menuFooter()]);
     }
     public function about(){
         $page = Page::find(5);
