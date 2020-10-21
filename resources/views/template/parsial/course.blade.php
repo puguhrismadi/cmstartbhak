@@ -103,7 +103,8 @@
 <div class="container">
     @include('template.component.chatstyle')
 </div>
-@include('template.parsial.videotestimoni')
+@include('template.course.carouselvideo')
+{{-- @include('template.parsial.videotestimoni') --}}
 @include('template.component.pricingcard')
 
 @endsection

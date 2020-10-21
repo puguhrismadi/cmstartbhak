@@ -72,7 +72,13 @@
         background-size: cover;
         
     }
-
+    .contentChat{
+        margin:80px;
+    }
+ ul{
+    list-style-type: none;
+    margin-left: 0pt;
+ }
 </style>
 
 
@@ -91,17 +97,28 @@
                 <div class="row no-gutters">
                     <div class="col-xl-7 d-flex align-items-stretch order-1 order-lg-1">
                         <div class="content d-flex flex-column justify-content-center">
-
+                           &nbsp;
                         </div>
                     </div>
                     <div class="chatRight image col-xl-5 d-flex align-items-stretch justify-content-center order-1 order-lg-1"
                         data-aos="fade-right" data-aos-delay="100">
-                        <img src="" class="img-fluid" alt="">
+                        <div class="contentChat">
+                            <div><i style="font-size: 45pt" class="fa fa-rocket"></i></div>
+                            <br>
+                            <h4>Peluang karir</h4>
+                            <p>{{$page->peluang_karir}} </p>
+                         
+                        </div>
                     </div>
                     
                     <div class="image chatLeft col-xl-5 d-flex align-items-stretch justify-content-center order-2 order-lg-1"
                     data-aos="fade-left" data-aos-delay="100">
-                   
+                    <div class="contentChat">
+                        <div><i style="font-size: 45pt" class="fa  fa-check-square-o"></i></div>
+                            <br>
+                    <h4>Persyaratan</h4>
+                    <p>{!!$page->persyaratan!!} </p>
+                    </div> 
                 </div>
                
                 <div class="col-xl-7 d-flex align-items-stretch order-2 order-lg-2">
@@ -126,7 +143,17 @@
                 </div>
                     <div class="image chatRight col-xl-5 d-flex align-items-stretch justify-content-center order-1 order-lg-2"
                         data-aos="fade-right" data-aos-delay="100">
-                        <br><br><br><br>
+                        <div class="contentChat">
+                            <div><i style="font-size: 45pt" class="fa  fa-institution"></i></div>
+                            <br>
+                            <h4>Fasilitas</h4>
+                             <i class="fa fa-check"> </i> Modul Digital <br>
+                                <i class="fa fa-check"> </i> Sertifikat <br>
+                                <i class="fa fa-check"> </i> Ruangan Full AC <br>
+                                <i class="fa fa-check"> </i> Akses Internet<br>
+                                <i class="fa fa-check"> </i> Lunch dan Snack
+                            
+                            </div> 
                         
                     </div>
                     
@@ -198,8 +225,8 @@
 {{-- <div class="container">
     @include('template.component.chatstyle')
 </div> --}}
-
-@include('template.course.videoslider')
+@include('template.course.carouselvideo')
+{{-- @include('template.course.videoslider') --}}
 @include('template.component.pricingcard')
 
 @endsection

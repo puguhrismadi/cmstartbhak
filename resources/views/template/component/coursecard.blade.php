@@ -7,6 +7,14 @@
         max-width: 1200px;
         background-color: white;
     }
+    .wrap2{
+        margin: 30px auto 0 auto;
+        width: 100%;
+        display: flex;
+        align-items: space-around;
+        max-width: 1200px;
+        background-color: white;
+    }
 
     .tile {
         width: 380px;
@@ -21,13 +29,14 @@
         border-style: none;
         overflow: hidden;
         color: white;
-        font-family: 'Roboto';
+        font-family: 'Poppins', sans-serif;
 
     }
 
     .tile img {
         height: 100%;
         width: 100%;
+        object-fit: cover;
         position: absolute;
         top: 0;
         left: 0;
@@ -40,6 +49,7 @@
         position: absolute;
         padding: 30px;
         height: calc(100% - 60px);
+        font-family: 'Poppins', sans-serif;
     }
 
     .tile h1 {
@@ -47,6 +57,9 @@
         font-weight: 300;
         margin: 0;
         text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        font-family: 'Poppins', sans-serif;
+        font-size: 25pt;
+        font-weight: bolder;
     }
 
     .tile h2 {
@@ -54,6 +67,8 @@
         margin: 20px 0 0 0;
         font-style: italic;
         transform: translateX(200px);
+        font-family: 'Poppins', sans-serif;
+        font-weight: bolder;
     }
 
     .tile p {
@@ -63,6 +78,7 @@
         /*   opacity:0; */
         transform: translateX(-200px);
         transition-delay: 0.2s;
+        font-family: 'Poppins', sans-serif;
     }
 
     .animate-text {
@@ -136,22 +152,32 @@
             width: 400px;
         }
     }
-
+.card {
+    border-radius:10px;
+    margin:10px;
+}
+.myimg {
+  width: 380px;
+  height: 360px;
+  object-fit: cover;
+}
 </style>
 <section class="section-title">
 <h2 >Our Training Service</h2>
 <p>Lorem ipsum dolor sit amet consectetur ad</p>
 </section>
-<div class="wrap col-md-3">
-
+<div class="row">
+<div style="text-align: center" class="col-md-12"  data-aos="fade-up" data-aos-delay="100">
+    @foreach($pages as $key=>$fpages)
+    <a href="{{url("course/$fpages->slug")}}">
     <div class="card tile">
-        <img
-            src='https://images.unsplash.com/photo-1464054313797-e27fb58e90a9?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=996&q=80' />
+        
+        <img class="" src="{{ Voyager::image( $fpages->header_page ) }}" alt="">
+        
         <div class="text">
-            <h1>Lorem ipsum.</h1>
-            <h2 class="animate-text">More lorem ipsum bacon ipsum.</h2>
-            <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken
-                meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>
+            <h1 class="text-center">{{ $fpages->title }}</h1>
+           
+            <p class="animate-text"> {{$fpages->excerpt}} </p>
             <div class="dots">
                 <span></span>
                 <span></span>
@@ -159,96 +185,11 @@
             </div>
         </div>
     </div>
-
-
-    <div class="card tile">
-        <img
-            src='https://images.unsplash.com/photo-1458668383970-8ddd3927deed?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=1004&q=80' />
-        <div class="text">
-            <h1>Lorem ipsum.</h1>
-            <h2 class="animate-text">More lorem ipsum bacon ipsum.</h2>
-            <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken
-                meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>
-            <div class="dots">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </div>
-
-    <div class="card tile">
-        <img
-            src='https://images.unsplash.com/photo-1422393462206-207b0fbd8d6b?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=1000&q=80' />
-        <div class="text">
-            <h1>Lorem ipsum.</h1>
-            <h2 class="animate-text">More lorem ipsum bacon ipsum.</h2>
-            <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken
-                meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>
-            <div class="dots">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </div>
-
-    
+   </a>
+    @endforeach
 
 </div>
-<div class="wrap col-md-3">
-
-    <div class="card tile">
-        <img
-            src='https://images.unsplash.com/photo-1464054313797-e27fb58e90a9?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=996&q=80' />
-        <div class="text">
-            <h1>Lorem ipsum.</h1>
-            <h2 class="animate-text">More lorem ipsum bacon ipsum.</h2>
-            <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken
-                meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>
-            <div class="dots">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="card tile">
-        <img
-            src='https://images.unsplash.com/photo-1458668383970-8ddd3927deed?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=1004&q=80' />
-        <div class="text">
-            <h1>Lorem ipsum.</h1>
-            <h2 class="animate-text">More lorem ipsum bacon ipsum.</h2>
-            <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken
-                meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>
-            <div class="dots">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </div>
-
-    <div class="card tile">
-        <img
-            src='https://images.unsplash.com/photo-1422393462206-207b0fbd8d6b?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=1000&q=80' />
-        <div class="text">
-            <h1>Lorem ipsum.</h1>
-            <h2 class="animate-text">More lorem ipsum bacon ipsum.</h2>
-            <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken
-                meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>
-            <div class="dots">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </div>
-
-    
-
 </div>
+
 
 </div>

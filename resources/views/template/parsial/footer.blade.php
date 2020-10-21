@@ -27,17 +27,13 @@
             <h4>Our Services</h4>
             <ul>
               {{-- @dump($menufooter) --}}
-              {{-- @foreach ($menufooter as $link)
+             @foreach ($menufooter as $link)
                   
               
               <li><i class="bx bx-chevron-right"></i> <a href="{{url("course/$link->slug")}}">{{$link->title}}</a></li>
-              @endforeach --}}
+              @endforeach 
 
-              {{-- <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Profesioanl Training</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li> --}}
+              
             </ul>
           </div>
 

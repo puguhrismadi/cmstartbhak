@@ -56,12 +56,12 @@ class HomeController extends Controller
         $page = Page::where('slug', '=', $slug)->firstOrFail();
         $idmateri = Page::select('id')->where('slug','=',$slug)->get();
         $materi = Materi::all();
-        $video = Video::where('archieved',1)->get();
+        $video = Video::where('archieved',1)->paginate(3);
         $videourl = Video::where('archieved',1)->get();
         $urlyutube=[];
         
 
-        return view('template.course.contentcourse',['page'=>$page,'materi'=>$materi,'video'=>$video,'urlvideo'=>$urlyutube,'menufooter'=>$this->menuFooter()]);
+        return view('template.course.contentcourse',['page'=>$page,'materi'=>$materi,'video'=>$video,'urlvideo'=>$urlyutube,'videourl'=>$videourl,'slug'=>$slug,'menufooter'=>$this->menuFooter()]);
     }
     public function about(){
         $page = Page::find(5);

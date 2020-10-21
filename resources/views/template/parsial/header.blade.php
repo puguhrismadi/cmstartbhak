@@ -10,7 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{ asset('bluetemplate/img/favicon.png')}}" rel="icon">
+  
+  
   <link href="{{ asset('bluetemplate/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 {{-- font awesome add --}}
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -28,7 +29,9 @@
 
   <!-- Template Main CSS File -->
   <link href="{{ asset('bluetemplate/css/style.css')}}" rel="stylesheet">
-
+<style>
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+</style>
   <!-- =======================================================
   * Template Name: Appland - v2.2.0
   * Template URL: https://bootstrapmade.com/free-bootstrap-app-landing-page-template/

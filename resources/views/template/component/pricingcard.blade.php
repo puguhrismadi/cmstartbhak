@@ -1,10 +1,11 @@
 
 
 <style>
-     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+    
  section.pricing {
   background: #007bff;
   background: linear-gradient(to right, #0062E6, #33AEFF);
+  font-family: 'Poppins', sans-serif;
 }
 
 .pricing .card {
@@ -23,11 +24,13 @@
   font-size: 0.9rem;
   letter-spacing: .1rem;
   font-weight: bold;
+  font-family: 'Poppins', sans-serif;
 }
 
 .pricing .card-price {
   font-size: 3rem;
   margin: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 .pricing .card-price .period {
@@ -36,6 +39,8 @@
 
 .pricing ul li {
   margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+  color: #192161;
 }
 
 .pricing .text-muted {
@@ -89,66 +94,58 @@ h1 {
        
       <div class="row">
        
-        <!-- Free Tier -->
-        <div class="col-lg-4">
+         <!-- workshop Tier -->
+         <div class="col-lg-4">
           <div class="card mb-5 mb-lg-0">
             <div class="card-body">
-              <h5 class="card-title text-muted text-uppercase text-center">Free</h5>
-              <h6 class="card-price text-center">$0<span class="period">/month</span></h6>
+              <h5 class="card-title text-muted text-uppercase text-center">Workshop</h5>
+              <h6 class="card-price text-center">@currency($page->price_workshop)<span class="period"></span></h6>
               <hr>
               <ul class="fa-ul">
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>Single User</li>
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>5GB Storage</li>
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>Unlimited Public Projects</li>
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>Community Access</li>
-                <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Unlimited Private Projects</li>
-                <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Dedicated Phone Support</li>
-                <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Free Subdomain</li>
-                <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Monthly Status Reports</li>
+                @foreach ($page->materi as $materi)
+                
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>{{$materi->nama_materi}}</li>
+                
+                @endforeach
               </ul>
-              <a href="#" class="btn btn-block btn-primary text-uppercase">Button</a>
+              
             </div>
           </div>
         </div>
-        <!-- Plus Tier -->
+        <!-- Reguler Tier -->
         <div class="col-lg-4">
           <div class="card mb-5 mb-lg-0">
             <div class="card-body">
-              <h5 class="card-title text-muted text-uppercase text-center">Plus</h5>
-              <h6 class="card-price text-center">Rp.1.500.000<span class="period">/month</span></h6>
+              <h5 class="card-title text-muted text-uppercase text-center">Reguler</h5>
+              <h6 class="card-price text-center">@currency($page->price_workshop)<span class="period"></span></h6>
               <hr>
               <ul class="fa-ul">
-                <li><span class="fa-li"><i class="fa fa-check"></i></span><strong>5 Users</strong></li>
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>50GB Storage</li>
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>Unlimited Public Projects</li>
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>Community Access</li>
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>Unlimited Private Projects</li>
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>Dedicated Phone Support</li>
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>Free Subdomain</li>
-                <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Monthly Status Reports</li>
+                @foreach ($page->materi as $materi)
+                
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>{{$materi->nama_materi}}</li>
+                
+                @endforeach
               </ul>
-              <a href="#" class="btn btn-block btn-primary text-uppercase">Button</a>
+              
             </div>
           </div>
         </div>
         <!-- Pro Tier -->
-        <div class="col-lg-4">
-          <div class="card">
+       
+         <div class="col-lg-4">
+          <div class="card mb-5 mb-lg-0">
             <div class="card-body">
-              <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
-              <h6 class="card-price text-center">$49<span class="period">/month</span></h6>
+              <h5 class="card-title text-muted text-uppercase text-center">Advance</h5>
+              <h6 class="card-price text-center">@currency($page->price_reguler)<span class="period"></span></h6>
               <hr>
               <ul class="fa-ul">
-                <li><span class="fa-li"><i class="fa fa-check"></i></span><strong>Unlimited Users</strong></li>
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>150GB Storage</li>
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>Unlimited Public Projects</li>
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>Community Access</li>
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>Unlimited Private Projects</li>
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>Dedicated Phone Support</li>
-                <li><span class="fa-li"><i class="fa fa-check"></i></span><strong>Unlimited</strong> Free Subdomains</li>
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>Monthly Status Reports</li>
+                @foreach ($page->materi as $materi)
+                
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>{{$materi->nama_materi}}</li>
+                
+                @endforeach
               </ul>
-              <a href="#" class="btn btn-block btn-primary text-uppercase">Button</a>
+              
             </div>
           </div>
         </div>
@@ -160,14 +157,14 @@ h1 {
         <br>
         <br>
          <div align="center" class="container text-center">
-            <h1 style="font-weight: bolder">Join Our Training </h1>
-            <p style="color: cornflowerblue">Segera Daftarkan dirimu</p>
+            <h1 data-aos="fade-up" data-aos-delay="100" style="font-weight: bolder">Join Our Training </h1>
+            <p data-aos="fade-up" data-aos-delay="200" style="color: cornflowerblue">Segera Daftarkan dirimu</p>
             <br>
-            <a id='btnRegister' class="btn-lg btn-primary" href="#">Register</a>
+            <a data-aos="fade-down" data-aos-delay="300" id='btnRegister' class="btn-lg btn-primary" href="#">Register</a>
             <br>
             <br>
           
-          <img class="mx-auto d-block" width="600px" src="{{url('image/bgJoinUs.png')}}" alt="">
+          <img data-aos="fade-down" data-aos-delay="400" class="mx-auto d-block" width="600px" src="{{url('image/bgJoinUs.png')}}" alt="">
          </div>
       </div>
   
