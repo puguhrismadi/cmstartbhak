@@ -56,24 +56,48 @@
     }
 
     .menara {
-        width: "800px";
+        text-align: center;
+        width: 1130px;
         position: absolute;
-        height: 1500px;
+        
     }
-    .chatRight {
-        background-image: url("{{asset('image/bg_chat_kanan.png')}}");
+    .chatRightAtas {
+        margin-top: 180px;
+        
+        background-image: url("{{asset('image/chat_atas_kanan_baru.png')}}");
         height: 400px;
+        background-size: cover;
+        
+    }
+    .chatRightBawah {
+        margin-top: 200px;
+        
+        background-image: url("{{asset('image/chat_bawah_kanan_baru.png')}}");
+        height: 320px;
         background-size: cover;
         
     }
     .chatLeft {
+        
+        margin-left: 30px;
+        margin-right: 780px;
+        margin-top: 120px;
         background-image: url("{{asset('image/bg_chat_kiri.png')}}");
-        height: 400px;
-        background-size: cover;
+        height: 500px;
+        background-size:cover;
         
     }
     .contentChat{
-        margin:80px;
+        padding-left: 30px;
+        margin:50px;
+    }
+    .contentChatBawah{
+        margin-top: 30px;
+        margin-left: 70px;
+        margin-bottom:100px;
+    }
+    .pemisahMenara {
+       
     }
  ul{
     list-style-type: none;
@@ -98,9 +122,10 @@
                     <div class="col-xl-7 d-flex align-items-stretch order-1 order-lg-1">
                         <div class="content d-flex flex-column justify-content-center">
                            &nbsp;
+                         
                         </div>
                     </div>
-                    <div class="chatRight image col-xl-5 d-flex align-items-stretch justify-content-center order-1 order-lg-1"
+                    <div class="chatRightAtas image col-xl-5 d-flex align-items-stretch justify-content-center order-1 order-lg-1"
                         data-aos="fade-right" data-aos-delay="100">
                         <div class="contentChat">
                             <div><i style="font-size: 45pt" class="fa fa-rocket"></i></div>
@@ -131,21 +156,15 @@
                     </div>
                 </div>
 
-                <div class="col-xl-7 d-flex align-items-stretch order-2 order-lg-2">
-                    <div class="content d-flex flex-column justify-content-center">
-                        <div class="row col-md-10">
-                            &nbsp;
-                           
-                          
+                
 
-                        </div>
-                    </div>
-                </div>
-                    <div class="image chatRight col-xl-5 d-flex align-items-stretch justify-content-center order-1 order-lg-2"
+                
+                    <div class="image chatRightBawah col-xl-5 d-flex align-items-stretch order-1 order-lg-2"
                         data-aos="fade-right" data-aos-delay="100">
-                        <div class="contentChat">
+                        <div class="contentChatBawah">
                             <div><i style="font-size: 45pt" class="fa  fa-institution"></i></div>
                             <br>
+                             
                             <h4>Fasilitas</h4>
                              <i class="fa fa-check"> </i> Modul Digital <br>
                                 <i class="fa fa-check"> </i> Sertifikat <br>
@@ -162,7 +181,7 @@
                         <div class="content d-flex flex-column justify-content-center">
                             <div class="row col-md-10">
                                 &nbsp;
-                                <br><br><br><br><br><br>
+                              
                                
                               
 
@@ -172,10 +191,7 @@
                     <div class="col-xl-7 d-flex align-items-stretch order-3 order-lg-3">
                         <div class="content d-flex flex-column justify-content-center">
                             <div class="row col-md-10">
-                                &nbsp;
-                                <br><br><br><br><br><br>
-                                <br><br><br><br><br><br>
-                                
+                             
                               
 
                             </div>
@@ -185,20 +201,7 @@
                         <div class="content d-flex flex-column justify-content-center">
                             <div class="row col-md-10">
                                 &nbsp;
-                             
-                               
-                                &nbsp;
-
-                                &nbsp;
-
-                                &nbsp;
-
-                                &nbsp;
                          
-                                &nbsp;
-                                <br>
-                                &nbsp;
-                                &nbsp;
                               
 
                             </div>
@@ -208,10 +211,12 @@
                         
 
 
-                        <div class="menara">
-                            <img src="{{asset('image/menara_atas.png')}}" class="img-fluid" alt="">
-                            <img src="{{asset('image/menara_tengah.png')}}" class="img-fluid" alt="">
-                            <img src="{{asset('image/menara_bawah.png')}}" class="img-fluid" alt="">
+                        <div class="menara ">
+                            
+                          <img  src="{{asset('image/menara_atas_baru.png')}}" class="img-fluid" alt=""> 
+                            <img src="{{asset('image/menara_tengah_baru.png')}}" class="img-fluid" alt="">
+                           
+                            <img src="{{asset('image/menara_bawah_baru.png')}}" class="img-fluid" alt=""> 
                         </div>
                     </div>
 

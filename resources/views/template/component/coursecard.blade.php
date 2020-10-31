@@ -164,7 +164,7 @@
 </style>
 <section class="section-title">
 <h2 >Our Training Service</h2>
-<p>Lorem ipsum dolor sit amet consectetur ad</p>
+<p>Berikut adalah Training yang tersedia di IT Cermat </p>
 </section>
 <div class="row">
 <div style="text-align: center" class="col-md-12"  data-aos="fade-up" data-aos-delay="100">

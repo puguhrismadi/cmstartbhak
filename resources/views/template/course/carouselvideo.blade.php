@@ -24,6 +24,9 @@ span.carousel-control-next-icon {
  position: relative;
  bottom: 40px;
 }
+.img-video {
+  height: 300px;
+}
 
 </style>
 <section class="section-title">
@@ -59,7 +62,8 @@ span.carousel-control-next-icon {
             
           </div>
         </a>
-       
+       <br>
+       <br>
 
       </div>
       @endif
@@ -76,13 +80,14 @@ span.carousel-control-next-icon {
           data-image="https://www.youtube.com/embed/{{$video->file_video}}"
 
           data-target="#image-gallery">
-          <img class="img-fluid card-img-top" src="{{Voyager::image($video->thumbnail_video)}}">
+          <img class="img-video " src="{{Voyager::image($video->thumbnail_video)}}">
           <div class="card-img-overlay t_img">
           
           </div>
         </a>
         
-
+        <br>
+        <br>
       </div>
       @endif
       @endforeach

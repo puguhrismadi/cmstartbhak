@@ -29,8 +29,10 @@ class HomeController extends Controller
         $fiture = Templatefeature::find(1);
         $team = Team::all();
         $testimoni = Testimonial::all();
-        
-        $data = ['posts'=>$posts,'pages'=>$pages,'fiture'=>$fiture,'team'=>$team,'testimoni'=>$testimoni,'menufooter'=>$this->menuFooter()];
+        $video = Video::where('archieved',1)->paginate(3);
+        $videourl = Video::where('archieved',1)->get();
+
+        $data = ['posts'=>$posts,'pages'=>$pages,'fiture'=>$fiture,'team'=>$team,'testimoni'=>$testimoni,'menufooter'=>$this->menuFooter(),'video'=>$video,'videourl'=>$videourl];
         return view('home', $data);
     }
     public function simpanBukuTamu(Request $request){
@@ -55,13 +57,14 @@ class HomeController extends Controller
     public function course($slug){
         $page = Page::where('slug', '=', $slug)->firstOrFail();
         $idmateri = Page::select('id')->where('slug','=',$slug)->get();
-        $materi = Materi::all();
+        $materi = Materi::orderBy('urutan','ASC')->get();
+        $materi2 = Materi::orderBy('urutan','ASC')->get();
         $video = Video::where('archieved',1)->paginate(3);
         $videourl = Video::where('archieved',1)->get();
         $urlyutube=[];
         
 
-        return view('template.course.contentcourse',['page'=>$page,'materi'=>$materi,'video'=>$video,'urlvideo'=>$urlyutube,'videourl'=>$videourl,'slug'=>$slug,'menufooter'=>$this->menuFooter()]);
+        return view('template.course.contentcourse',['page'=>$page,'materi'=>$materi,'materi2'=>$materi2,'video'=>$video,'urlvideo'=>$urlyutube,'videourl'=>$videourl,'slug'=>$slug,'menufooter'=>$this->menuFooter()]);
     }
     public function about(){
         $page = Page::find(5);
@@ -89,6 +92,7 @@ class HomeController extends Controller
     public function formDaftarTraining(){
         $kategori=Kategoritraining::all();
         $jadwal=Jadwaltraining::all();
-        return view('registrasi.formreg',['kategori'=>$kategori,'jadwal'=>$jadwal]);
+        
+        return view('registrasi.formreg',['kategori'=>$kategori,'jadwal'=>$jadwal,'menufooter'=>$this->menuFooter()]);
     }
 }
